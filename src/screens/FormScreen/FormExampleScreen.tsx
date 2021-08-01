@@ -6,9 +6,13 @@ import { ButtonPrimary } from '../../components/styles/Button';
 const FormExampleScreen = () => {
 	const { Form } = useForm();
 
+	const handleSubmit = (values: any) => {
+		alert(JSON.stringify(values, null, 2));
+	};
+
 	return (
 		<main>
-			<Form>
+			<Form onSubmit={handleSubmit}>
 				<h2>SIGN UP</h2>
 				<Input
 					required

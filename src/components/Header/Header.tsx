@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import {
 	HeaderStyled,
@@ -17,10 +18,12 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ toggle, theme }) => {
+	const { push } = useHistory();
+
 	return (
 		<HeaderStyled>
 			<Nav>
-				<NavItem>react-patterns</NavItem>
+				<NavItem onClick={() => push('/')}>react-patterns</NavItem>
 			</Nav>
 			<ToggleButton
 				onClick={toggle}

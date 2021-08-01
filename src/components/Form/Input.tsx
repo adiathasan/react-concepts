@@ -6,6 +6,7 @@ import { useFormContext } from './hook/useForm';
 export interface Props {
 	name: string;
 	placeholder?: string;
+	initValue?: string;
 	type?: string;
 	required?: boolean;
 	validator?: {
@@ -15,7 +16,7 @@ export interface Props {
 }
 
 const Input: React.FC<Props> = (props) => {
-	const { name, validator, placeholder, type, required } = props;
+	const { name, validator, placeholder, type, required, initValue } = props;
 
 	const { setValues } = useFormContext();
 
@@ -23,7 +24,7 @@ const Input: React.FC<Props> = (props) => {
 
 	const [error, setError] = useState('');
 
-	const [value, setValue] = useState('');
+	const [value, setValue] = useState(() => (initValue ? initValue : ''));
 
 	useEffect(() => {
 		setValues((old) => ({ ...old, [name]: value }));

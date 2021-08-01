@@ -16,10 +16,10 @@ const App: React.FC = () => {
 
 	return (
 		<ThemeProvider theme={themes[theme]}>
-			<GlobalStyles />
-			<Header theme={theme} toggle={toggleTheme} />
-			<AppStyled>
-				<BrowserRouter>
+			<BrowserRouter>
+				<GlobalStyles />
+				<Header theme={theme} toggle={toggleTheme} />
+				<AppStyled>
 					<Switch>
 						<Route
 							component={FormExampleScreen}
@@ -28,8 +28,8 @@ const App: React.FC = () => {
 						/>
 						<Route component={HomeScreen} exact path='/' />
 					</Switch>
-				</BrowserRouter>
-			</AppStyled>
+				</AppStyled>
+			</BrowserRouter>
 		</ThemeProvider>
 	);
 };

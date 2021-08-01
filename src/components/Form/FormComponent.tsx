@@ -6,7 +6,7 @@ import { Api } from './form.types';
 
 interface FormProps {
 	children: React.ReactNode;
-	onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
+	onSubmit?: (values: any) => void;
 }
 
 export type SForm = ((c: FormProps) => JSX.Element) & {
@@ -19,14 +19,14 @@ const FormComponent = (api: Api) => {
 			({ children, onSubmit }) => {
 				if (!Form.api) return <></>;
 
-				const { formContext, ...values } = Form.api;
+				const { formContext, ...rest } = Form.api;
 
 				return (
-					<formContext.Provider value={{ ...values }}>
+					<formContext.Provider value={{ ...rest }}>
 						<FormStyled
 							onSubmit={(e) => {
 								e.preventDefault();
-								onSubmit?.(e);
+								onSubmit?.(rest.values);
 							}}>
 							{children}
 						</FormStyled>
