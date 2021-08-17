@@ -5,16 +5,18 @@ import { LinkBlank, LinkCustom } from '../../components/styles/LinkCustom';
 import { patternLinks } from '../../static/me';
 import { EThemes } from '../../Theme/theme';
 
-const HomeScreen = () => {
+const HomeScreen: React.FC = () => {
 	return (
 		<Main>
 			{patternLinks.map((data, i) => (
 				<Each key={data.code + i}>
 					<H2>{data.title}</H2>
-					<LinkCustom to={data.link}>Demo!</LinkCustom>
-					<LinkBlank target='_blank' href={data.code} rel='noreferrer'>
-						Code!
-					</LinkBlank>
+					<LinkContainer>
+						<LinkCustom to={data.link}>Demo!</LinkCustom>
+						<LinkBlank target='_blank' href={data.code} rel='noreferrer'>
+							Code!
+						</LinkBlank>
+					</LinkContainer>
 				</Each>
 			))}
 		</Main>
@@ -22,6 +24,15 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+export const LinkContainer = styled.div`
+	display: flex;
+	align-items: center;
+
+	& > * {
+		margin-right: 0.8rem;
+	}
+`;
 
 export const H2 = styled.h2`
 	margin-bottom: 1rem;
@@ -46,6 +57,7 @@ export const Each = styled.div`
 	transition: 0.3s ease;
 
 	&:hover {
-		transform: translateY(-20px) rotateX(5deg);
+		transform: scale(1.05);
+		filter: brightness(1.3);
 	}
 `;

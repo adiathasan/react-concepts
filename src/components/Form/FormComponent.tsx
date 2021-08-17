@@ -9,7 +9,7 @@ interface FormProps {
 	onSubmit?: (values: any) => void;
 }
 
-export type SForm = ((c: FormProps) => JSX.Element) & {
+export type SForm = ((c: FormProps) => JSX.Element | null) & {
 	api?: Api;
 };
 
@@ -17,7 +17,7 @@ const FormComponent = (api: Api) => {
 	const Form: SForm = useMemo(
 		() =>
 			({ children, onSubmit }) => {
-				if (!Form.api) return <></>;
+				if (!Form.api) return null;
 
 				const { formContext, ...rest } = Form.api;
 

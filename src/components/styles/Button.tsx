@@ -17,6 +17,5 @@ export const Button = styled.button`
 
 export const ButtonPrimary = styled(Button)`
 	background-color: ${({ theme }) => theme[EThemes.BTN_PRIMARY]};
-	color: ${({ theme }) => theme[EThemes.TEXT_PRIMARY]};
 	color: ${({ theme }) => theme[EThemes.BG_PRIMARY]};
 `;

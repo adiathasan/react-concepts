@@ -22,8 +22,8 @@ export const GlobalStyles = createGlobalStyle<IThemes>`
         color: ${({ theme }) => theme['text-primary']};
         transition: .2s ease-in-out all;
         overflow-x: hidden;
-        	min-height: 100vh;
-	min-width: 100vw;
+        min-height: 100vh;
+	    min-width: 100vw;
     }
     code {
     	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
