@@ -8,8 +8,7 @@ import { useTheme } from './hooks/useTheme';
 import { GlobalStyles } from './Theme/global';
 
 /* screens */
-import FormExampleScreen from './screens/FormScreen/FormExampleScreen';
-import HomeScreen from './screens/Home/HomeScreen';
+import { routes } from './routes/routes';
 
 const App: React.FC = () => {
 	const { toggleTheme, theme } = useTheme();
@@ -21,12 +20,9 @@ const App: React.FC = () => {
 				<Header theme={theme} toggle={toggleTheme} />
 				<AppStyled>
 					<Switch>
-						<Route
-							component={FormExampleScreen}
-							exact
-							path='/form-hook-pattern'
-						/>
-						<Route component={HomeScreen} exact path='/' />
+						{routes.map((route, i) => (
+							<Route key={route.path + i} {...route} />
+						))}
 					</Switch>
 				</AppStyled>
 			</BrowserRouter>

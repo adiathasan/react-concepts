@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { useForm } from '../../components/Form/hook/useForm';
 import Input from '../../components/Form/Input';
+import ScreenLayout from '../../components/Layout/ScreenLayout';
 import { ButtonPrimary } from '../../components/styles/Button';
 
-const FormExampleScreen = () => {
+const FormExampleScreen: React.FC = () => {
 	const { Form } = useForm();
 
 	const handleSubmit = (values: any) => {
@@ -11,7 +13,7 @@ const FormExampleScreen = () => {
 	};
 
 	return (
-		<main>
+		<ScreenLayout title='Form Hook'>
 			<Form onSubmit={handleSubmit}>
 				<h2>SIGN UP</h2>
 				<Input
@@ -33,7 +35,7 @@ const FormExampleScreen = () => {
 				/>
 				<ButtonPrimary type='submit'>SUBMIT</ButtonPrimary>
 			</Form>
-		</main>
+		</ScreenLayout>
 	);
 };
 
