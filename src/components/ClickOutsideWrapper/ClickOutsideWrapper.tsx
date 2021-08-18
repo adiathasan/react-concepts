@@ -3,19 +3,19 @@ import styled from 'styled-components';
 
 interface Props {
 	isOpen: boolean;
-	isUnmount: boolean;
+	isUnmounted: boolean;
 }
 
 const ClickOutsideWrapper: React.FC<Props> = React.forwardRef<
 	HTMLDivElement,
 	Props
 >((props, ref) => {
-	const { children, isOpen, isUnmount } = props;
+	const { children, isOpen, isUnmounted } = props;
 
 	if (!isOpen) return null;
 
 	return (
-		<StyledClickWrapper done={isUnmount} ref={ref}>
+		<StyledClickWrapper done={isUnmounted} ref={ref}>
 			{children}
 		</StyledClickWrapper>
 	);

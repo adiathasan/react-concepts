@@ -5,7 +5,7 @@ const TIME_UNMOUT = 400;
 const useClickOutside = (clickOutsideCb?: () => void) => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const [isUnmount, setIsUnmount] = useState(false);
+	const [isUnmounted, setIsUnmounted] = useState(false);
 
 	const toggle = useCallback(() => {
 		let timeFn;
@@ -17,11 +17,11 @@ const useClickOutside = (clickOutsideCb?: () => void) => {
 			return;
 		}
 
-		setIsUnmount(true);
+		setIsUnmounted(true);
 
 		timeFn = setTimeout(() => {
 			setIsOpen(false);
-			setIsUnmount(false);
+			setIsUnmounted(false);
 		}, TIME_UNMOUT);
 	}, [isOpen]);
 
@@ -50,7 +50,7 @@ const useClickOutside = (clickOutsideCb?: () => void) => {
 		};
 	}, [ref, toggle, cbRef, isOpen]);
 
-	return { ref, toggle, isOpen, register: { isOpen, isUnmount, ref } };
+	return { ref, toggle, isOpen, register: { isOpen, isUnmounted, ref } };
 };
 
 export default useClickOutside;
