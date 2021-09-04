@@ -8,17 +8,19 @@ import { EThemes } from '../../Theme/theme';
 const HomeScreen: React.FC = () => {
 	return (
 		<Main>
-			{patternLinks.map((data, i) => (
-				<Each key={data.code + i}>
-					<H2>{data.title}</H2>
-					<LinkContainer>
-						<LinkCustom to={data.link}>Demo!</LinkCustom>
-						<LinkBlank target='_blank' href={data.code} rel='noreferrer'>
-							Code!
-						</LinkBlank>
-					</LinkContainer>
-				</Each>
-			))}
+			{patternLinks
+				.filter((link) => link.enabled)
+				.map((data, i) => (
+					<Each key={data.code + i}>
+						<H2>{data.title}</H2>
+						<LinkContainer>
+							<LinkCustom to={data.link}>Demo!</LinkCustom>
+							<LinkBlank target='_blank' href={data.code} rel='noreferrer'>
+								Code!
+							</LinkBlank>
+						</LinkContainer>
+					</Each>
+				))}
 		</Main>
 	);
 };

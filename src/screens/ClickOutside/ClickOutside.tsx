@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CgLogOut, CgProfile } from 'react-icons/cg';
+import { CgLogOut, CgProfile, CgArrowDown } from 'react-icons/cg';
 import { ImProfile } from 'react-icons/im';
 
 import { EThemes } from '../../Theme/theme';
 import { ButtonPrimary } from '../../components/styles/Button';
+import { MainWrapper } from '../../components/styles/Main';
 import ScreenLayout from '../../components/Layout/ScreenLayout';
 import useClickOutside from '../../components/ClickOutsideWrapper/useClickOutside';
 import ClickOutsideWrapper from '../../components/ClickOutsideWrapper/ClickOutsideWrapper';
@@ -14,9 +15,10 @@ const ClickOutside: React.FC = () => {
 
 	return (
 		<ScreenLayout title='Click Outside'>
-			<Main>
+			<MainWrapper>
+				<AnimArrow size={60} />
 				<BtnRounded onClick={toggle}>
-					<CgProfile />
+					<CgProfile size={30} />
 				</BtnRounded>
 				<ClickOutsideWrapper {...register}>
 					<FloatingMenu>
@@ -40,27 +42,17 @@ const ClickOutside: React.FC = () => {
 						</Item>
 					</FloatingMenu>
 				</ClickOutsideWrapper>
-			</Main>
+			</MainWrapper>
 		</ScreenLayout>
 	);
 };
 
 export default ClickOutside;
 
-export const Main = styled.main`
-	position: relative;
-	background-color: ${({ theme }) => theme[EThemes.BG_SECONDARY]};
-	color: ${({ theme }) => theme[EThemes.TEXT_PRIMARY]};
-	padding: 2rem;
-	border-radius: 6px;
-	min-width: 300px;
-	box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.1);
-`;
-
 export const FloatingMenu = styled.div`
 	position: absolute;
-	right: 10px;
-	top: 80%;
+	right: 0px;
+	top: 110%;
 	border-radius: 6px;
 	min-width: 100px;
 	padding: 0.3rem;
@@ -73,8 +65,8 @@ export const FloatingMenu = styled.div`
 export const BtnRounded = styled.div`
 	border-radius: 50%;
 	margin-left: auto;
-	height: 40px;
-	width: 40px;
+	height: 80px;
+	width: 80px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -90,4 +82,11 @@ export const BtnItem = styled(ButtonPrimary)`
 
 export const Item = styled.section`
 	margin-bottom: 0.2rem;
+`;
+
+export const AnimArrow = styled(CgArrowDown)`
+	position: absolute;
+	right: 0px;
+	top: 100%;
+	opacity: 0;
 `;
