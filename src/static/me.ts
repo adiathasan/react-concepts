@@ -24,16 +24,15 @@ export const patternLinks = [
 	{
 		title: EComponentNames.TreeView,
 		code: joinRepo(REPO, ECodeLinks.TreeView),
-		link: ERoutes.TreeFile,
+		link: ERoutes.TreeView,
 		isExternal: false,
-		enabled: false,
+		enabled: true,
 	},
 	{
 		title: 'more-pattern (coming...)',
 		code: GITHUB,
 		link: '',
 		isExternal: true,
-
 		enabled: true,
 	},
 ];

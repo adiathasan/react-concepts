@@ -11,7 +11,7 @@ import TreeFile from '../screens/TreeFile/TreeViewScreen';
 export const routes = [
 	{
 		component: HomeScreen,
-		path: '/',
+		path: ERoutes.Home,
 		exact: true,
 	},
 	{
@@ -26,7 +26,7 @@ export const routes = [
 	},
 	{
 		component: TreeFile,
-		path: ERoutes.TreeFile,
+		path: ERoutes.TreeView,
 		exact: true,
 	},
 ];

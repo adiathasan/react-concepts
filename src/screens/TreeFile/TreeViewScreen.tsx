@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import ScreenLayout from '../../components/Layout/ScreenLayout';
+import TreeView from '../../components/TreeView/TreeView';
+import { viewData } from '../../components/TreeView/data';
 import { MainWrapper } from '../../components/styles/Main';
 
 const TreeViewScreen: React.FC = () => {
+	const [state, setState] = useState(viewData);
+
 	return (
 		<ScreenLayout title='Tree View'>
 			<TreeViewContainer>
-				<h2>Tree</h2>
+				<TreeView
+					data={state}
+					onToggle={(i, checked) =>
+						setState((old) => {
+							const ref = [...old];
+
+							ref[i].show = checked;
+
+							return [...ref];
+						})
+					}
+				/>
 			</TreeViewContainer>
 		</ScreenLayout>
 	);
@@ -16,4 +31,6 @@ const TreeViewScreen: React.FC = () => {
 
 export default TreeViewScreen;
 
-const TreeViewContainer = styled(MainWrapper)``;
+const TreeViewContainer = styled(MainWrapper)`
+	min-height: 38vh;
+`;

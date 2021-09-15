@@ -31,7 +31,7 @@ const StyledClickWrapper = styled.div<{ done: boolean }>`
 	@keyframes mount {
 		0% {
 			opacity: 0;
-			transform: translateY(10px);
+			transform: translateY(-10px);
 		}
 		100% {
 			opacity: 1;
@@ -46,7 +46,7 @@ const StyledClickWrapper = styled.div<{ done: boolean }>`
 		}
 		100% {
 			opacity: 0;
-			transform: translateY(10px);
+			transform: translateY(-10px);
 		}
 	}
 `;

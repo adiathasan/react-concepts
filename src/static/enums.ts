@@ -2,7 +2,7 @@ export enum ERoutes {
 	Home = '/',
 	Form = '/form-hook-pattern',
 	ClickOutside = '/click-outside',
-	TreeFile = '/tree-file',
+	TreeView = '/tree-view',
 }
 
 export enum EComponentNames {

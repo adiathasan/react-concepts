@@ -75,7 +75,6 @@ export const BtnRounded = styled.div`
 `;
 
 export const BtnItem = styled(ButtonPrimary)`
-	text-align: start;
 	background-color: ${({ theme }) => theme[EThemes.BG_PRIMARY]};
 	color: ${({ theme }) => theme[EThemes.TEXT_PRIMARY]};
 `;
@@ -85,8 +84,19 @@ export const Item = styled.section`
 `;
 
 export const AnimArrow = styled(CgArrowDown)`
+	transform: translateY(-10px);
 	position: absolute;
-	right: 0px;
-	top: 100%;
-	opacity: 0;
+	bottom: 100%;
+	z-index: 1;
+	right: 15%;
+	animation: bounce 2s ease-in-out infinite alternate;
+
+	@keyframes bounce {
+		0% {
+			transform: translateY(-10px);
+		}
+		100% {
+			transform: translateY(20px);
+		}
+	}
 `;
