@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import styled from 'styled-components';
+import styled, { StyledProps } from 'styled-components';
 
 import { EThemes } from '../../Theme/theme';
 import { Api } from './form.types';
 
-interface FormProps {
+interface FormProps extends StyledProps<any> {
 	children: React.ReactNode;
 	onSubmit?: (values: any) => void;
 }
@@ -16,7 +16,7 @@ export type SForm = ((c: FormProps) => JSX.Element | null) & {
 const FormComponent = (api: Api) => {
 	const Form: SForm = useMemo(
 		() =>
-			({ children, onSubmit }) => {
+			({ children, onSubmit, ...all }) => {
 				if (!Form.api) return null;
 
 				const { formContext, ...rest } = Form.api;
@@ -24,6 +24,7 @@ const FormComponent = (api: Api) => {
 				return (
 					<formContext.Provider value={{ ...rest }}>
 						<FormStyled
+							{...all}
 							onSubmit={(e) => {
 								e.preventDefault();
 								onSubmit?.(rest.values);

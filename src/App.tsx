@@ -33,7 +33,7 @@ const App: React.FC = () => {
 export default App;
 
 const AppStyled = styled.div`
-	min-height: 50vh;
+	min-height: 80vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;

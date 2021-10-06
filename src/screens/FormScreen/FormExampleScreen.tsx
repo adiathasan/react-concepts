@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { useForm } from '../../components/Form/hook/useForm';
-import Input from '../../components/Form/Input';
-import ScreenLayout from '../../components/Layout/ScreenLayout';
 import { ButtonPrimary } from '../../components/styles/Button';
+import ScreenLayout from '../../components/Layout/ScreenLayout';
+import Input from '../../components/Form/Input';
 
 const FormExampleScreen: React.FC = () => {
 	const { Form } = useForm();

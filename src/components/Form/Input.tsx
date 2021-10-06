@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useMemo, useState } from 'react';
+import styled, { css } from 'styled-components';
+
+import useInput from './hook/useInput';
 import { EThemes } from '../../Theme/theme';
 import { useFormContext } from './hook/useForm';
 
@@ -18,41 +20,46 @@ export interface Props {
 const Input: React.FC<Props> = (props) => {
 	const { name, validator, placeholder, type, required, initValue } = props;
 
+	const input = useInput(initValue);
+
 	const { setValues } = useFormContext();
 
 	const [touched, setTouched] = useState(false);
 
 	const [error, setError] = useState('');
 
-	const [value, setValue] = useState(() => (initValue ? initValue : ''));
+	const inputMethods = useMemo(
+		() => ({
+			onBlur: () => setValues({ [name]: input.value }),
 
-	useEffect(() => {
-		setValues((old) => ({ ...old, [name]: value }));
-	}, [value, name, setValues]);
+			onFocus: () => {
+				if (!touched) setTouched(true);
+			},
+		}),
+		[input.value, name, setValues, touched]
+	);
 
 	useEffect(() => {
 		if (validator && touched) {
-			const isValid = validator.regex.test(value);
+			const isValid = validator.regex.test(input.value);
 
 			if (!isValid) setError(validator.message);
 			else setError('');
 		}
-	}, [touched, validator, value]);
+	}, [input.value, touched, validator]);
 
 	return (
 		<Wrapper>
 			<InputStyled
-				onFocus={() => {
-					if (!touched) setTouched(true);
-				}}
-				required={required}
+				{...input}
+				{...inputMethods}
+				autoComplete='off'
 				name={name}
 				type={type}
-				value={value}
+				required={required}
 				placeholder={placeholder}
-				onChange={(e) => setValue(e.target.value)}
 			/>
-			<Error>{!!error && <p>{error}</p>}</Error>
+			<Error error={error}> {error}</Error>
 		</Wrapper>
 	);
 };
@@ -73,13 +80,23 @@ export const InputStyled = styled.input`
 	}
 `;
 
-export const Error = styled.div`
+export const Error = styled.div<{ error: string }>`
 	color: orangered;
 	min-width: 10px;
 	padding: 0.1rem;
 	text-align: start;
 	font-size: small;
 	letter-spacing: 0.1rem;
+	opacity: 0;
+	width: 0;
+	transition: 0.2s ease;
+
+	${({ error }) =>
+		!!error &&
+		css`
+			opacity: 1;
+			width: auto;
+		`}
 `;
 
 export const Wrapper = styled.div``;
