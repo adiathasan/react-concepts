@@ -88,7 +88,7 @@ export const AnimArrow = styled(CgArrowDown)`
 	position: absolute;
 	bottom: 100%;
 	z-index: 1;
-	right: 15%;
+	right: 10%;
 	animation: bounce 2s ease-in-out infinite alternate;
 
 	@keyframes bounce {

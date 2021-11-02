@@ -20,6 +20,9 @@ const TreeView: React.FC<Props> = (props) => {
 
 	const { data, onToggle } = props;
 
+	/**
+	 * convert it to hook
+	 */
 	const attributes = getUrlParam(location, EUrl.Attributes)?.split(',');
 
 	const urlPusher = (name: string) => {
