@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CgLogOut, CgProfile, CgArrowDown } from 'react-icons/cg';
 import { ImProfile } from 'react-icons/im';
+import { CgLogOut, CgProfile, CgArrowDown } from 'react-icons/cg';
 
 import { EThemes } from '../../Theme/theme';
-import { ButtonPrimary } from '../../components/styles/Button';
 import { MainWrapper } from '../../components/styles/Main';
+import { ButtonPrimary } from '../../components/styles/Button';
 import ScreenLayout from '../../components/Layout/ScreenLayout';
 import useClickOutside from '../../components/ClickOutsideWrapper/useClickOutside';
 import ClickOutsideWrapper from '../../components/ClickOutsideWrapper/ClickOutsideWrapper';
