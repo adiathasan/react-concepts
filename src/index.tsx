@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import StoreProvider from './store/StoreProvider';
-import { themeReducer } from './Theme/ThemeReducer';
+import { AppThemeProvider } from './Theme/ThemeReducer';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<StoreProvider init={'dark'} reducer={themeReducer}>
+		<AppThemeProvider>
 			<App />
-		</StoreProvider>
+		</AppThemeProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

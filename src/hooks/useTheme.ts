@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
-import { useThemeDispatch, useThemeValue } from '../Theme/ThemeReducer';
+import { useAppThemeDispatch, useAppThemeValue } from '../Theme/ThemeReducer';
 
 export type Theme = 'light' | 'dark';
 
 export const useTheme = () => {
-	const theme = useThemeValue();
+	const theme = useAppThemeValue();
 
-	const themeDispatch = useThemeDispatch();
+	const themeDispatch = useAppThemeDispatch();
 
 	const toggleTheme = useCallback(() => {
 		if (theme === 'light') {

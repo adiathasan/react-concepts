@@ -1,5 +1,5 @@
 import { Theme } from '../hooks/useTheme';
-import { useStore, useStoreDispatch } from '../store/StoreProvider';
+import makeStore from '../store/makeStore';
 
 export type ThemeActions =
 	| { type: 'TOGGLE_THEME_LIGHT'; payload: 'light' }
@@ -16,10 +16,9 @@ export const themeReducer = (state: Theme, action: ThemeActions): Theme => {
 	}
 };
 
-export const useThemeDispatch = () => {
-	return useStoreDispatch<ThemeActions>();
-};
+const [AppThemeProvider, useAppThemeValue, useAppThemeDispatch] = makeStore<
+	Theme,
+	ThemeActions
+>('dark', themeReducer);
 
-export const useThemeValue = () => {
-	return useStore<Theme>();
-};
+export { AppThemeProvider, useAppThemeValue, useAppThemeDispatch };
