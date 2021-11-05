@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import { themes } from './Theme/theme';
@@ -11,19 +11,19 @@ import { GlobalStyles } from './Theme/global';
 import { routes } from './routes/routes';
 
 const App: React.FC = () => {
-	const { toggleTheme, theme } = useTheme();
+	const { theme } = useTheme();
 
 	return (
 		<ThemeProvider theme={themes[theme]}>
 			<BrowserRouter>
 				<GlobalStyles />
-				<Header theme={theme} toggle={toggleTheme} />
+				<Header />
 				<AppStyled>
-					<Switch>
+					<Routes>
 						{routes.map((route, i) => (
 							<Route key={route.path + i} {...route} />
 						))}
-					</Switch>
+					</Routes>
 				</AppStyled>
 			</BrowserRouter>
 		</ThemeProvider>

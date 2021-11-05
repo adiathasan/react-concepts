@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { RiArrowRightSFill } from 'react-icons/ri';
 import styled from 'styled-components';
 
@@ -16,7 +16,8 @@ interface Props {
 }
 
 const TreeView: React.FC<Props> = (props) => {
-	const { push, location } = useHistory();
+	const navigate = useNavigate();
+	const location = useLocation();
 
 	const { data, onToggle } = props;
 
@@ -27,7 +28,7 @@ const TreeView: React.FC<Props> = (props) => {
 
 	const urlPusher = (name: string) => {
 		if (!attributes) {
-			push(location.pathname + `?${EUrl.Attributes}=${name}`);
+			navigate(location.pathname + `?${EUrl.Attributes}=${name}`);
 			return;
 		}
 
@@ -40,11 +41,11 @@ const TreeView: React.FC<Props> = (props) => {
 		}
 
 		if (_.isArrayEmpty(ref)) {
-			push(location.pathname);
+			navigate(location.pathname);
 			return;
 		}
 
-		push(location.pathname + `?${EUrl.Attributes}=${ref.join(',')}`);
+		navigate(location.pathname + `?${EUrl.Attributes}=${ref.join(',')}`);
 	};
 
 	return (

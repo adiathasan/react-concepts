@@ -10,23 +10,19 @@ import TreeFile from '../screens/TreeFile/TreeViewScreen';
 
 export const routes = [
 	{
-		component: HomeScreen,
+		element: <HomeScreen />,
 		path: ERoutes.Home,
-		exact: true,
 	},
 	{
-		component: FormExampleScreen,
+		element: <FormExampleScreen />,
 		path: ERoutes.Form,
-		exact: true,
 	},
 	{
-		component: ClickOutside,
+		element: <ClickOutside />,
 		path: ERoutes.ClickOutside,
-		exact: true,
 	},
 	{
-		component: TreeFile,
+		element: <TreeFile />,
 		path: ERoutes.TreeView,
-		exact: true,
 	},
 ];

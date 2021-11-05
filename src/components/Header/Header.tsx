@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import {
 	HeaderStyled,
@@ -8,25 +8,24 @@ import {
 	SvgToggleDark,
 	ToggleButton,
 } from './Header.styles';
-import { Theme } from '../../hooks/useTheme';
+import { Theme, useTheme } from '../../hooks/useTheme';
 
 const inverseTheme = (theme: Theme) => (theme === 'light' ? 'dark' : 'light');
 
-interface Props {
-	toggle: () => void;
-	theme: Theme;
-}
+interface Props {}
 
-const Header: React.FC<Props> = ({ toggle, theme }) => {
-	const { push } = useHistory();
+const Header: React.FC<Props> = () => {
+	const navigate = useNavigate();
+
+	const { theme, toggleTheme } = useTheme();
 
 	return (
 		<HeaderStyled>
 			<Nav>
-				<NavItem onClick={() => push('/')}>react-patterns</NavItem>
+				<NavItem onClick={() => navigate('/')}>react-patterns</NavItem>
 			</Nav>
 			<ToggleButton
-				onClick={toggle}
+				onClick={toggleTheme}
 				id='theme-toggle'
 				aria-label={`Switch to ${inverseTheme(theme)} theme`}>
 				<SvgToggleDark

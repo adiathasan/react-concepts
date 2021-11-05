@@ -1,12 +1,24 @@
-import { useState } from 'react';
+import { useCallback } from 'react';
+import { useThemeDispatch, useThemeValue } from '../Theme/ThemeReducer';
 
 export type Theme = 'light' | 'dark';
 
-export const useTheme = (initTheme: Theme = 'dark') => {
-	const [theme, setTheme] = useState(() => initTheme);
+export const useTheme = () => {
+	const theme = useThemeValue();
 
-	const toggleTheme = () =>
-		setTheme((old) => (old === 'dark' ? 'light' : 'dark'));
+	const themeDispatch = useThemeDispatch();
 
-	return { toggleTheme, theme };
+	const toggleTheme = useCallback(() => {
+		if (theme === 'light') {
+			themeDispatch({ type: 'TOGGLE_THEME_DARK', payload: 'dark' });
+			return;
+		}
+
+		themeDispatch({
+			type: 'TOGGLE_THEME_LIGHT',
+			payload: 'light',
+		});
+	}, [theme, themeDispatch]);
+
+	return { themeDispatch, theme, toggleTheme };
 };
