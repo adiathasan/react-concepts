@@ -7,11 +7,11 @@ interface Props {
 	title?: string;
 }
 
-const ScreenLayout: React.FC<Props> = ({ title, children }) => {
+const ScreenLayout: React.FC<Props> = ({ title = '', children }) => {
 	return (
 		<ScreenLayoutStyled>
 			<Helmet>
-				<title>React Patterns {title && ' | ' + title}</title>
+				<title>React Patterns {' | ' + title}</title>
 			</Helmet>
 			{children}
 		</ScreenLayoutStyled>

@@ -3,15 +3,18 @@ export enum ERoutes {
 	Form = '/form-hook-pattern',
 	ClickOutside = '/click-outside',
 	TreeView = '/tree-view',
+	ReactStepMachine = '/react-step-machine',
 }
 
 export enum EComponentNames {
-	Form = 'form-hook-pattern',
+	ReactStepMachine = 'react-step-machine',
 	ClickOutside = 'click-outside',
+	Form = 'form-hook-pattern',
 	TreeView = 'tree-view',
 }
 
 export enum ECodeLinks {
+	ReactStepMachine = 'react-step-machine',
 	Form = 'components/Form/hook/useForm.tsx',
 	ClickOutside = 'components/ClickOutsideWrapper',
 	TreeView = 'components/TreeView',

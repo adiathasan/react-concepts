@@ -1,5 +1,5 @@
 import { Theme } from '../hooks/useTheme';
-import makeStore from '../store/makeStore';
+import { createStore } from 'react-store-maker';
 
 export type ThemeActions =
 	| { type: 'TOGGLE_THEME_LIGHT'; payload: 'light' }
@@ -16,9 +16,9 @@ export const themeReducer = (state: Theme, action: ThemeActions): Theme => {
 	}
 };
 
-const [AppThemeProvider, useAppThemeValue, useAppThemeDispatch] = makeStore<
-	Theme,
-	ThemeActions
->('dark', themeReducer);
+const [AppThemeProvider, useAppThemeValue, useAppThemeDispatch] = createStore<Theme, ThemeActions>(
+	'dark',
+	themeReducer
+);
 
 export { AppThemeProvider, useAppThemeValue, useAppThemeDispatch };

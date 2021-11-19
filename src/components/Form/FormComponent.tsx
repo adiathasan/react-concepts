@@ -54,5 +54,4 @@ export const FormStyled = styled.form`
 	border-radius: 6px;
 	text-align: center;
 	min-width: 300px;
-	box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.1);
 `;

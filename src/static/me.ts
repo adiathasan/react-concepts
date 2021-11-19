@@ -3,8 +3,7 @@ import { ECodeLinks, EComponentNames, ERoutes } from './enums';
 
 export const GITHUB = 'https://github.com/adiathasan';
 
-export const REPO =
-	'https://github.com/adiathasan/react-concepts/blob/master/src';
+export const REPO = 'https://github.com/adiathasan/react-concepts/blob/master/src';
 
 export const patternLinks = [
 	{
@@ -25,6 +24,13 @@ export const patternLinks = [
 		title: EComponentNames.TreeView,
 		code: joinRepo(REPO, ECodeLinks.TreeView),
 		link: ERoutes.TreeView,
+		isExternal: false,
+		enabled: true,
+	},
+	{
+		title: EComponentNames.ReactStepMachine,
+		code: joinRepo(GITHUB, ECodeLinks.ReactStepMachine),
+		link: ERoutes.ReactStepMachine,
 		isExternal: false,
 		enabled: true,
 	},

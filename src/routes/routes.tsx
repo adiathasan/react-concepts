@@ -7,6 +7,7 @@ import FormExampleScreen from '../screens/FormScreen/FormExampleScreen';
 import ClickOutside from '../screens/ClickOutside/ClickOutside';
 import HomeScreen from '../screens/Home/HomeScreen';
 import TreeFile from '../screens/TreeFile/TreeViewScreen';
+import StepExample from '../screens/StepMachine/StepExample';
 
 export const routes = [
 	{
@@ -20,6 +21,10 @@ export const routes = [
 	{
 		element: <ClickOutside />,
 		path: ERoutes.ClickOutside,
+	},
+	{
+		element: <StepExample />,
+		path: ERoutes.ReactStepMachine,
 	},
 	{
 		element: <TreeFile />,
