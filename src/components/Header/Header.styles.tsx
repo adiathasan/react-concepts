@@ -3,7 +3,7 @@ import { IThemes } from '../../Theme/theme';
 
 export const HeaderStyled = styled.header`
 	position: relative;
-	padding: 1rem 2rem;
+	padding: 1rem 1rem;
 	border-bottom: 1px solid hsla(0, 0%, 50%, 0.432);
 	display: flex;
 `;
@@ -31,7 +31,7 @@ export const NavItem = styled.div<IThemes>`
 
 	&:hover {
 		&::before {
-			width: 96px;
+			width: 140px;
 			opacity: 1;
 		}
 	}
@@ -39,7 +39,7 @@ export const NavItem = styled.div<IThemes>`
 
 export const ToggleButton = styled.button<IThemes>`
 	position: absolute;
-	right: 16px;
+	right: 14px;
 	top: 4px;
 	background: transparent;
 	display: grid;

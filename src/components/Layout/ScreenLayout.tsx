@@ -1,26 +1,26 @@
 import React from 'react';
 
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import {Helmet} from 'react-helmet';
 
 interface Props {
-	title?: string;
+    title?: string;
 }
 
-const ScreenLayout: React.FC<Props> = ({ title = '', children }) => {
-	return (
-		<ScreenLayoutStyled>
-			<Helmet>
-				<title>React Patterns {' | ' + title}</title>
-			</Helmet>
-			{children}
-		</ScreenLayoutStyled>
-	);
+const ScreenLayout: React.FC<Props> = ({title = '', children}) => {
+    return (
+        <ScreenLayoutStyled>
+            <Helmet>
+                <title>ADIAT HASAN {'| ' + title}</title>
+            </Helmet>
+            {children}
+        </ScreenLayoutStyled>
+    );
 };
 
 export default ScreenLayout;
 
 const ScreenLayoutStyled = styled.div`
-	min-height: 400px;
-	min-width: 400px;
+  min-height: 400px;
+  min-width: 340px;
 `;

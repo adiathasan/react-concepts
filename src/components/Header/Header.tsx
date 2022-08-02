@@ -9,10 +9,13 @@ import {
 	ToggleButton,
 } from './Header.styles';
 import { Theme, useTheme } from '../../hooks/useTheme';
+import {ERoutes} from "../../static/enums";
 
 const inverseTheme = (theme: Theme) => (theme === 'light' ? 'dark' : 'light');
 
 interface Props {}
+
+export const LOGO = `ADIAT HASAN`
 
 const Header: React.FC<Props> = () => {
 	const navigate = useNavigate();
@@ -22,7 +25,7 @@ const Header: React.FC<Props> = () => {
 	return (
 		<HeaderStyled>
 			<Nav>
-				<NavItem onClick={() => navigate('/')}>react-patterns</NavItem>
+				<NavItem onClick={() => navigate(ERoutes.Me)}>{LOGO}</NavItem>
 			</Nav>
 			<ToggleButton
 				onClick={toggleTheme}

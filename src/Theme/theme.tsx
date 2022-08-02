@@ -13,9 +13,9 @@ export const themes = {
 		...common,
 		[EThemes.LINK_PRIMARY]: 'green',
 		[EThemes.BTN_PRIMARY]: 'hsl(0, 0%, 10%)',
-		[EThemes.BG_PRIMARY]: 'hsl(0, 0%, 90%)',
-		[EThemes.BG_SECONDARY]: 'hsl(0, 0%, 84%)',
-		[EThemes.TEXT_PRIMARY]: 'hsl(0, 0%, 13%)',
+		[EThemes.BG_PRIMARY]: 'hsl(0, 0%,91%)',
+		[EThemes.BG_SECONDARY]: 'hsl(0, 0%, 95%)',
+		[EThemes.TEXT_PRIMARY]: 'hsl(0, 0%, 33%)',
 	},
 	dark: {
 		...common,
@@ -23,7 +23,7 @@ export const themes = {
 		[EThemes.BTN_PRIMARY]: 'hsl(0, 0%, 90%)',
 		[EThemes.BG_PRIMARY]: 'hsl(0, 0%, 13%)',
 		[EThemes.BG_SECONDARY]: 'hsl(0, 0%, 18%)',
-		[EThemes.TEXT_PRIMARY]: 'hsl(0, 0%, 90%)',
+		[EThemes.TEXT_PRIMARY]: 'hsl(0, 0%, 80%)',
 	},
 };
 

@@ -1,5 +1,6 @@
 export enum ERoutes {
 	Home = '/',
+	Me = '/me',
 	Form = '/form-hook-pattern',
 	ClickOutside = '/click-outside',
 	TreeView = '/tree-view',
