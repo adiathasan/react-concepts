@@ -31,7 +31,7 @@ export const NavItem = styled.div<IThemes>`
 
 	&:hover {
 		&::before {
-			width: 140px;
+			width: 146px;
 			opacity: 1;
 		}
 	}
