@@ -10,6 +10,7 @@ import { GlobalStyles } from './Theme/global';
 /* screens */
 import { routes } from './routes/routes';
 
+
 const App: React.FC = () => {
 	const { theme } = useTheme();
 

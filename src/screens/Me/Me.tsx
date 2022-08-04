@@ -6,8 +6,12 @@ import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 
 import ScreenLayout from "../../components/Layout/ScreenLayout";
 import {EThemes} from "../../Theme/theme";
+import {useTheme} from "../../hooks/useTheme";
 
 const Me = () => {
+
+    const {theme} = useTheme()
+
     return (
         <ScreenLayout title='Frontend Engineer'>
             <Main>
@@ -31,7 +35,7 @@ const Me = () => {
                                 <a rel="noreferrer"
                                    target='_blank'
                                    href="https://github.com/adiathasan">
-                                    <AiFillGithub color='white' size={26}/>
+                                    <AiFillGithub color={theme === 'light' ? '#484848' : 'white'} size={26}/>
                                 </a>
                             </ChipContainer>
                         </div>
@@ -224,20 +228,20 @@ const Me = () => {
                         </Subtitle>
                         <br/>
                         <Subtitle>
-                            Epic React by kent C. Dodds (01/2022 - Present) <a target='_blank' rel="noreferrer"
-                                                                               href="https://epicreact.dev"><ExternalIcon
+                            Epic React by kent C. Dodds | Advanced React Patterns (01/2022 - Present) <a target='_blank' rel="noreferrer"
+                                                                               href="https://drive.google.com/file/d/1tnMpk5WdIyACLeFoCYA6c9NyQ2bZLpQm/view?usp=sharing"><ExternalIcon
                             style={{transform: 'translateY(3px)'}}/></a>
                         </Subtitle>
                         <br/>
                         <Subtitle>
                             HTML, CSS, and Javascriptfor Web
                             Developers(coursera) (08/2020 - 08/2020) <a target='_blank' rel="noreferrer"
-                                                                        href="https://epicreact.dev"><ExternalIcon
+                                                                        href="https://www.coursera.org/account/accomplishments/verify/V3VKL9396UYL?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"><ExternalIcon
                             style={{transform: 'translateY(3px)'}}/></a>
                         </Subtitle>
                         <br/>
                         <Subtitle>
-                            Machine-learning(coursera) (05/2020 - 06/2020) <a target='_blank' rel="noreferrer" href="https://epicreact.dev"><ExternalIcon
+                            Machine-learning(coursera) (05/2020 - 06/2020) <a target='_blank' rel="noreferrer" href="https://www.coursera.org/account/accomplishments/verify/CT7DHVZFXGEM?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"><ExternalIcon
                             style={{transform: 'translateY(3px)'}}/></a>
                         </Subtitle>
 
@@ -304,7 +308,7 @@ export const Sides = styled.section<{ colSpan?: string; rowSpan?: string; }>`
 export const Title = styled.h2`
   font-weight: bold;
   margin-bottom: 20px;
-  
+
   @media (max-width: 780px) {
     font-size: 1.2rem;
 
@@ -335,7 +339,7 @@ export const Subtitle = styled.h4`
   margin-bottom: 14px;
   letter-spacing: .03rem;
   line-height: 25px;
-  
+
   @media (max-width: 780px) {
     font-size: .9rem;
   }
