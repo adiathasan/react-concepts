@@ -124,9 +124,14 @@ const Me = () => {
 						<Title>Open Source Contributions</Title>
 						<Title>
 							<a target='_blank' rel='noreferrer' href='https://github.com/adiathasan/mui-react-hook-form-plus'>
-								Material ui React Hook Form&nbsp;+
+								Mui React Hook Form&nbsp;+
 								<ExternalIcon style={{ marginLeft: 4, marginBottom: 1 }} />
 							</a>
+							<img
+								alt='stars'
+								src='https://badgen.net/github/stars/adiathasan/mui-react-hook-form-plus'
+								style={{ transform: 'translateY(5px) translateX(16px)', width: 60, float: 'right' }}
+							/>
 						</Title>
 						<Text>
 							The perfect recipe with <Chip>material-ui</Chip> 💙 <Chip>TS</Chip> 💙 <Chip>react-hook-form</Chip> &
@@ -137,11 +142,6 @@ const Me = () => {
 							<Chip>Material ui</Chip> is effective for building UI's of great UX & DX in a <Chip>React</Chip> project.
 							To make it stateful, we have pay the price of sacrificing DX & somethimes lack of performance and
 							no-scalibility.{' '}
-							<img
-								alt='stars'
-								src='https://badgen.net/github/stars/adiathasan/mui-react-hook-form-plus'
-								style={{ transform: 'translateY(5px)' }}
-							/>
 						</Text>
 						<br />
 						<br />
@@ -149,6 +149,11 @@ const Me = () => {
 							<a target='_blank' rel='noreferrer' href='https://github.com/adiathasan/react-store-maker'>
 								React Store Maker <ExternalIcon style={{ marginLeft: 4 }} />
 							</a>
+							<img
+								alt='stars'
+								src='https://badgen.net/github/stars/adiathasan/react-store-maker'
+								style={{ transform: 'translateY(5px) translateX(16px)', width: 60, float: 'right' }}
+							/>
 						</Title>
 						<Text>
 							It is a utility function for creating stores for global / local state management with the Context API
@@ -159,11 +164,6 @@ const Me = () => {
 							While architecting BD tickets app I didn't want to use redux or other heavy state management library. I
 							was using Contexts for small things and react-query for data fetching. Then I felt the necessity of
 							writing a function that would just give the context instead of writing a lot of boiler plate code.{' '}
-							<img
-								alt='stars'
-								src='https://badgen.net/github/stars/adiathasan/react-store-maker'
-								style={{ transform: 'translateY(5px)' }}
-							/>
 						</Text>
 						<br />
 						<br />
@@ -171,6 +171,11 @@ const Me = () => {
 							<a target='_blank' rel='noreferrer' href='https://github.com/adiathasan/react-step-machine'>
 								React Step Machine <ExternalIcon />
 							</a>
+							<img
+								alt='stars'
+								src='https://badgen.net/github/stars/adiathasan/react-step-machine'
+								style={{ transform: 'translateY(5px) translateX(16px)', width: 60, float: 'right' }}
+							/>
 						</Title>
 						<Text>
 							A hook-based multistep wizard library made for React.js apps with vast control over the logic of the user
@@ -183,11 +188,6 @@ const Me = () => {
 							</a>
 							. It didn't support my use-cases that I needed for my project. Hence, I built my own step wizard with
 							recent react concepts.{' '}
-							<img
-								alt='stars'
-								src='https://badgen.net/github/stars/adiathasan/react-step-machine'
-								style={{ transform: 'translateY(5px)' }}
-							/>
 						</Text>
 
 						<br />
@@ -196,6 +196,11 @@ const Me = () => {
 							<a target='_blank' rel='noreferrer' href='https://adiathasan.vercel.app'>
 								React Concepts <ExternalIcon style={{ marginLeft: 4, marginBottom: 0 }} />
 							</a>
+							<img
+								alt='stars'
+								src='https://badgen.net/github/stars/adiathasan/react-concepts'
+								style={{ transform: 'translateY(5px) translateX(16px)', width: 60, float: 'right' }}
+							/>
 						</Title>
 						<Text>
 							Advanced concepts of react such as hooks, contexts, reusable components, custom hooks, prop getters, theme
@@ -204,11 +209,6 @@ const Me = () => {
 							<br />
 							When I learn a new concept in react I tend to practice it and share my work so that other developers can
 							grasp the concepts and remain upto date with the industry standard.{' '}
-							<img
-								alt='stars'
-								src='https://badgen.net/github/stars/adiathasan/react-concepts'
-								style={{ transform: 'translateY(5px)' }}
-							/>
 						</Text>
 					</Each>
 				</Sides>
