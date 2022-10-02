@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react';
-import styled, { StyledProps } from 'styled-components';
+import styled from 'styled-components';
 
 import { EThemes } from '../../Theme/theme';
 import { Api } from './form.types';
 
-interface FormProps extends StyledProps<any> {
+interface FormProps extends React.FormHTMLAttributes<any> {
 	children: React.ReactNode;
 	onSubmit?: (values: any) => void;
+	// formProps: React.FormHTMLAttributes<any>;
 }
 
 export type SForm = ((c: FormProps) => JSX.Element | null) & {
@@ -39,7 +40,7 @@ const FormComponent = (api: Api) => {
 
 	Form.api = api;
 
-	return Form;
+	return React.memo(Form);
 };
 
 export default FormComponent;

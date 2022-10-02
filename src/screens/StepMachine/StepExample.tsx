@@ -1,3 +1,4 @@
+import * as React from "react";
 import { StepMachine, Step, useStepActions, StepContainer } from 'react-step-machine';
 
 import Input from '../../components/Form/Input';
@@ -6,15 +7,20 @@ import { useForm } from '../../components/Form/hook/useForm';
 import { MainWrapper } from '../../components/styles/Main';
 import { ButtonPrimary } from '../../components/styles/Button';
 
+interface FormValue {
+	username: string;
+	email: string;
+}
+
 const StepExample = () => {
 	const { Form } = useForm();
 
-	const handleSubmit = (values: any) => {
+	const handleSubmit = (values: FormValue) => {
 		alert(JSON.stringify(values, null, 2));
 	};
 
 	return (
-		<ScreenLayout>
+		<ScreenLayout title='React Step Machine'>
 			<MainWrapper style={{ width: 500 }}>
 				<StepMachine>
 					<StepContainer style={{ overflowX: 'hidden', minHeight: '30vh' }}>
@@ -61,7 +67,7 @@ const StepExample = () => {
 							</Form>
 						</Step>
 						<Step order={3} name='##buuuu'>
-							<h1 style={{ color: 'orangered', textAlign: 'center' }}>You are awsome</h1>
+							<h1 style={{ color: 'orangered', textAlign: 'center' }}>You are awesome</h1>
 						</Step>
 					</StepContainer>
 					<ToggleBtn />
