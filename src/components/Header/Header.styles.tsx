@@ -53,6 +53,10 @@ export const ToggleButton = styled.button<IThemes>`
 	border-radius: 50%;
 	outline: none;
 
+	@media print {
+		display: none;
+	}
+
 	&::after {
 		content: attr(aria-label);
 		background: ${({ theme }) => theme['text-primary']};
