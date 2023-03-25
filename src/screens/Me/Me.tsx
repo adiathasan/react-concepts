@@ -30,7 +30,7 @@ const Me = () => {
 							</ChipContainer>
 						</div>
 						<Text>
-							Hi, I'v started my journey as a Frontend engineer on 2020 and currently working remotely at{' '}
+							Hi, I've started my journey as a Frontend engineer in 2020 and currently working remotely at{' '}
 							<a rel='noreferrer' target='_blank' href='https://xen.works'>
 								xen.works
 							</a>
