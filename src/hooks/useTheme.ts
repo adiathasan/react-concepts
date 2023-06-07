@@ -20,5 +20,5 @@ export const useTheme = () => {
 		});
 	}, [theme, themeDispatch]);
 
-	return { themeDispatch, theme, toggleTheme };
+	return { themeDispatch, theme, toggleTheme, isDark: theme === 'dark' };
 };
