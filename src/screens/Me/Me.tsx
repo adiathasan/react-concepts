@@ -38,8 +38,8 @@ const Me = () => {
 							when needed.
 							<br />
 							<br />
-							Currently I'm focusing on open source projects as it leads to a better understanding certain concepts and
-							also helps me to further sharpen my skills.
+							Currently I'm focusing on open source projects as it leads to a better understanding of certain concepts
+							and also helps me to further sharpen my skills.
 						</Text>
 					</Each>
 					<Each>
@@ -54,7 +54,7 @@ const Me = () => {
 						</Subtitle>
 						<Text>
 							1. Responsible for developing scalable UIs with solid principles. <br />
-							2. Introducing Effortlessly scalable. Type-safe integrations with material UI inputs and react-hook-form.{' '}
+							2. Introducing effortlessly scalable type-safe integrations with material UI inputs and react-hook-form.{' '}
 							<br />
 							3. Adapting React Query while replacing redux for server-side type-safe data management through apis.{' '}
 							<br />
@@ -103,7 +103,7 @@ const Me = () => {
 							<a target='_blank' rel='noreferrer' href='https://now.com.bd'>
 								Now
 							</a>{' '}
-							(January 2021 - July - 2020)
+							(January 2020 - July 2021)
 						</Subtitle>
 						<Text>
 							1. Was in charge of developing the client side of now.com.bd from start to finish. <br />
