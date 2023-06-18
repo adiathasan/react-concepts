@@ -16,7 +16,7 @@ const Me = () => {
 				<Sides colSpan='span 8'>
 					<Each>
 						<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-							<Title>Software Engineer | Fullstack | Typescript</Title>
+							<Title>Software Engineer | Fullstack</Title>
 							<ChipContainer style={{ gap: 20 }}>
 								<a rel='noreferrer' target='_blank' href='https://stackoverflow.com/users/13089572/adiat-hasan'>
 									<IoLogoStackoverflow color='orange' size={26} />
