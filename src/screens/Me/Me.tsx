@@ -16,7 +16,7 @@ const Me = () => {
 				<Sides colSpan='span 8'>
 					<Each>
 						<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-							<Title>Software Engineer | Fullstack</Title>
+							<Title>Software Engineer | Fullstack | Typescript</Title>
 							<ChipContainer style={{ gap: 20 }}>
 								<a rel='noreferrer' target='_blank' href='https://stackoverflow.com/users/13089572/adiat-hasan'>
 									<IoLogoStackoverflow color='orange' size={26} />
@@ -89,6 +89,7 @@ const Me = () => {
 						<ChipContainer>
 							<Chip>Typescript</Chip>
 							<Chip>React</Chip>
+							<Chip>React-native</Chip>
 							<Chip>Next</Chip>
 							<Chip>Node</Chip>
 							<Chip>Nest</Chip>
@@ -110,10 +111,13 @@ const Me = () => {
 							2. Technology used: React, Next.js, Typescript, React Query, Custom Hooks, Graphql, Sass, Tailwind. <br />
 							3. Made the technical decisions by consulting with our tech lead to improve the projects.
 							<br />
+							4. Worked on Rider tracking mobile app [React Native]
+							<br />
 						</Text>
 						<ChipContainer>
 							<Chip>Typescript</Chip>
 							<Chip>React</Chip>
+							<Chip>React-native</Chip>
 							<Chip>Next</Chip>
 							<Chip>SSG</Chip>
 							<Chip>React-query</Chip>
@@ -226,11 +230,37 @@ const Me = () => {
 						<Text style={{ margin: '12px 0' }}>
 							<a href='mailto:adiathasan.me@gmail.com'>adiathasan.me@gmail.com</a>
 						</Text>
-						<hr
-							style={{
-								borderColor: isDark ? '#727272' : '#ddd',
-							}}
-						/>
+					</Each>
+					<Each>
+						<Subtitle>Skills</Subtitle>
+						<ChipContainer>
+							<Chip>Javascript</Chip>
+							<Chip>Typescript</Chip>
+							<Chip>Css</Chip>
+							<Chip>Node</Chip>
+							<Chip>Express</Chip>
+							<Chip>Nest</Chip>
+							<Chip>Parse Server</Chip>
+							<Chip>Monorepo</Chip>
+							<Chip>React</Chip>
+							<Chip>React-native</Chip>
+							<Chip>Next</Chip>
+							<Chip>Svelte</Chip>
+							<Chip>Solid.js</Chip>
+							<Chip>React-query</Chip>
+							<Chip>React-hook-form</Chip>
+							<Chip>Material-ui</Chip>
+							<Chip>React-testing-library</Chip>
+							<Chip>Jest</Chip>
+							<Chip>Redux</Chip>
+							<Chip>Graphql</Chip>
+							<Chip>Tailwind</Chip>
+							<Chip>Antd</Chip>
+							<Chip>Styled-components</Chip>
+						</ChipContainer>
+					</Each>
+					<Each>
+						<Subtitle>Related Links</Subtitle>
 						<Text style={{ margin: '12px 0' }}>
 							<a href='https://github.com/adiathasan'>github.com/adiathasan</a>
 						</Text>
@@ -265,33 +295,6 @@ const Me = () => {
 						<a href='https://medium.com/@adiathasan/typesafe-routes-in-next-js-a5f3f4d3cbbb'>
 							Typesafe routes in Next.js 📘
 						</a>
-					</Each>
-					<Each>
-						<Subtitle>Skills</Subtitle>
-						<ChipContainer>
-							<Chip>Javascript</Chip>
-							<Chip>Typescript</Chip>
-							<Chip>Css</Chip>
-							<Chip>Node</Chip>
-							<Chip>Express</Chip>
-							<Chip>Nest</Chip>
-							<Chip>Parse Server</Chip>
-							<Chip>Monorepo</Chip>
-							<Chip>React</Chip>
-							<Chip>Next</Chip>
-							<Chip>Svelte</Chip>
-							<Chip>Solid.js</Chip>
-							<Chip>React-query</Chip>
-							<Chip>React-hook-form</Chip>
-							<Chip>Material-ui</Chip>
-							<Chip>React-testing-library</Chip>
-							<Chip>Jest</Chip>
-							<Chip>Redux</Chip>
-							<Chip>Graphql</Chip>
-							<Chip>Tailwind</Chip>
-							<Chip>Antd</Chip>
-							<Chip>Styled-components</Chip>
-						</ChipContainer>
 					</Each>
 					<Each>
 						<Subtitle>Education</Subtitle>
