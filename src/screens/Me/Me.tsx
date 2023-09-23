@@ -224,7 +224,7 @@ const Me = () => {
 						<Subtitle>General Information's</Subtitle>
 						<Text>London 🇬🇧 United Kingdom</Text>
 						<Text style={{ margin: '12px 0' }}>
-							<a href='tel:+447305432233'>+44 7305 432233</a>
+							<a href='tel:+447432113152'>+44 7432 113152</a>
 						</Text>
 						<Text style={{ margin: '12px 0' }}>
 							<a href='mailto:adiathasan.me@gmail.com'>adiathasan.me@gmail.com</a>
