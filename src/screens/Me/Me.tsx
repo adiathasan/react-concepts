@@ -46,11 +46,21 @@ const Me = () => {
 						<Title>Work Experience</Title>
 
 						<Subtitle>
+							Senior Frontend Engineer{' '}
+							<a target='_blank' rel='noreferrer' href='https://giraffe360.com'>
+								Giraffe360
+							</a>{' '}
+							(December 2023 - present)
+						</Subtitle>
+						<Text>
+							1. Developing Video Editor with WebGL. <br />
+						</Text>
+						<Subtitle>
 							Senior Software Engineer{' '}
 							<a target='_blank' rel='noreferrer' href='https://bluetechbd.com'>
 								Blue Tech
 							</a>{' '}
-							(October 2021 - present)
+							(October 2021 - November 2023)
 						</Subtitle>
 						<Text>
 							1. Architected the frontend for bdtickets.com and a few internal apps. <br />
@@ -76,7 +86,7 @@ const Me = () => {
 							<a target='_blank' rel='noreferrer' href='https://xen.works'>
 								Xen Works
 							</a>{' '}
-							(August 2021 - present)
+							(August 2021 - November 202)
 						</Subtitle>
 						<Text>
 							1. Responsible for developing scalable UIs with solid principles. <br />
